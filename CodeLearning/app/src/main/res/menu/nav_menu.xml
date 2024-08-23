@@ -10,23 +10,32 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/nav_home"
-            android:title="Home"/>
+            android:title="首頁"/>
 
         <item
-            android:id="@+id/nav_settings"
-            android:icon="@drawable/nav_settings"
-            android:title="Settings"/>
+            android:id="@+id/nav_document"
+            android:icon="@drawable/nav_document"
+            android:title="練習"/>
 
         <item
-            android:id="@+id/nav_share"
-            android:icon="@drawable/nav_share"
-            android:title="Share"/>
+            android:id="@+id/nav_checklist"
+            android:icon="@drawable/nav_checklist"
+            android:title="To Do List"/>
 
         <item
-            android:id="@+id/nav_about"
-            android:icon="@drawable/nav_about"
-            android:title="About Us"/>
+            android:id="@+id/nav_timer"
+            android:icon="@drawable/nav_timer"
+            android:title="計時器"/>
 
+        <item
+            android:id="@+id/nav_person"
+            android:icon="@drawable/nav_person"
+            android:title="會員資料"/>
+
+        <item
+            android:id="@+id/nav_note"
+            android:icon="@drawable/nav_note"
+            android:title="小筆記"/>
     </group>
 
     <item

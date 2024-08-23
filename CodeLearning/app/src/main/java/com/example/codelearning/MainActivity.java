@@ -57,12 +57,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int itemId = item.getItemId();
         if (itemId == R.id.nav_home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
-        } else if (itemId == R.id.nav_settings) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
-        } else if (itemId == R.id.nav_share) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
-        } else if (itemId == R.id.nav_about) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
+        } else if (itemId == R.id.nav_document) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DocumentFragment()).commit();
+        } else if (itemId == R.id.nav_checklist) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ChecklistFragment()).commit();
+        } else if (itemId == R.id.nav_timer) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TimerFragment()).commit();
+        } else if (itemId == R.id.nav_person) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PersonFragment()).commit();
+        } else if (itemId == R.id.nav_note){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NoteFragment()).commit();
         } else if (itemId == R.id.nav_logout) {
             Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
         }
