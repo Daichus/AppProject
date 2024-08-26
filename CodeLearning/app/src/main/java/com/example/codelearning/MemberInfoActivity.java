@@ -3,6 +3,7 @@ package com.example.codelearning;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -82,7 +83,18 @@ public class MemberInfoActivity extends AppCompatActivity {
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();  // 回到登入畫面
+                // 清除用戶的 Session 或登錄信息，具體取決於你如何保存這些信息
+                // 例如，你可以清除 SharedPreferences 中的登錄狀態
+                getSharedPreferences("userPrefs", MODE_PRIVATE)
+                        .edit()
+                        .clear()
+                        .apply();
+
+                // 回到登入畫面
+                Intent intent = new Intent(MemberInfoActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();  // 結束當前活動
             }
         });
 
@@ -122,7 +134,7 @@ public class MemberInfoActivity extends AppCompatActivity {
             emailTextView.setText("信箱： " + email);
             birthdayTextView.setText("生日： " + birthday);
         } else {
-            Toast.makeText(this, "未找到用戶資料", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "未找到用戶資料!!!!", Toast.LENGTH_SHORT).show();
         }
 
         cursor.close();
@@ -201,9 +213,21 @@ public class MemberInfoActivity extends AppCompatActivity {
 
         if (deletedRows > 0) {
             Toast.makeText(this, "用戶已刪除", Toast.LENGTH_SHORT).show();
-            finish();  // 刪除成功後返回登入畫面或關閉當前活動
+
+            // 清除用戶的 Session 或登錄信息
+            getSharedPreferences("userPrefs", MODE_PRIVATE)
+                    .edit()
+                    .clear()
+                    .apply();
+
+            // 跳轉到登入畫面
+            Intent intent = new Intent(MemberInfoActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();  // 結束當前活動
         } else {
             Toast.makeText(this, "刪除失敗", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
