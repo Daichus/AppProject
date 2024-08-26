@@ -1,0 +1,46 @@
+"id","question","option1","option2","option3","option4","answer","unit_id"
+1,Java中用來宣告整數變數的關鍵字是什麼？,int,float,boolean,char,1,1
+2,下列哪個運算符號用於邏輯AND運算？,&&,||,!,&,1,1
+3,if-else結構中的else是什麼作用？,執行在if條件不成立時的代碼,執行在if條件成立時的代碼,跳過if語句,終止程序,1,1
+4,下列哪個運算符號用於計算餘數？,/,%,*,-,2,1
+5,在Java中如何正確宣告一個字串變數？,"String name = ""Hello"";","char name = ""Hello"";","boolean name = ""Hello"";","int name = ""Hello"";",1,1
+6,下列哪個敘述描述switch-case語句是正確的？,switch語句中可以包含多個case,每個case語句後面必須包含break,default是必須的,switch語句中不能包含case,1,1
+7,下列哪個運算符號具有最高的優先級？,+,*,&&,++,4,1
+8,在Java中，for迴圈的第三個部分是用來做什麼的？,判斷迴圈是否繼續,執行迴圈內的代碼,更新迴圈變數,初始化變數,3,1
+9,下列哪個敘述關於while迴圈是正確的？,while迴圈在每次執行之前都會檢查條件,while迴圈只能執行一次,while迴圈無法包含其他的迴圈,while迴圈一定會執行至少一次,1,1
+10,下列哪個是用來讀取使用者輸入的Java類別？,Scanner,BufferedReader,InputStream,FileReader,1,2
+11,使用System.out.println輸出資料時，哪個符號用來結束每行？,;,:,",",.,1,2
+12,如何正確讀取一個整數值輸入？,int num = scanner.nextInt();,int num = scanner.next();,int num = scanner.readInt();,int num = scanner.readLine();,1,2
+13,Scanner類別中用於讀取字串的方法是什麼？,nextLine(),nextInt(),nextFloat(),nextBoolean(),1,2
+14,下列哪個System.out.println語句可以正確顯示變數值？,"System.out.println(""Value: "" + x);","System.out.println(""Value:"" x);","System.out.println(""Value: + x);","System.out.println(Value: "" + x);",1,2
+15,使用System.in.read()時會返回什麼類型的資料？,int,char,String,boolean,1,2
+16,下列哪個語句可以讀取使用者輸入並將其轉換為大寫？,String input = scanner.nextLine().toUpperCase();,String input = scanner.next().toUpperCase();,String input = scanner.nextInt().toUpperCase();,String input = scanner.nextFloat().toUpperCase();,1,2
+17,如何正確檢查使用者輸入的數字是否是偶數？,if (num % 2 == 0),if (num % 2 = 0),if (num / 2 == 0),if (num & 2 == 0),1,2
+18,使用System.out.printf格式化輸出時，下列哪個格式碼用於浮點數？,%f,%d,%s,%c,1,2
+19,如何宣告一個整數型的一維陣列？,int[] arr = new int[10];,int arr = new int[10];,int[] arr = new int();,int[] arr = 10;,1,3
+20,下列哪個方法可以用於取得陣列的長度？,arr.length,arr.size(),arr.getLength(),arr.len,1,3
+21,在Java中，ArrayList的初始大小是多少？,"10","5","15","0",1,3
+22,如何在ArrayList中添加一個新元素？,list.add(element);,list.put(element);,list.insert(element);,list.append(element);,1,3
+23,如何將一個二維陣列的第一行的第一個元素設為5？,arr[0][0] = 5;,arr[1][1] = 5;,arr[0][1] = 5;,arr[1][0] = 5;,1,3
+24,如何檢查ArrayList是否為空？,list.isEmpty(),list.size() == 0,list == null,list.size == 0,1,3
+25,如何移除ArrayList中的一個特定元素？,list.remove(element);,list.delete(element);,list.erase(element);,list.removeAt(element);,1,3
+26,如何正確宣告一個儲存字串的LinkedList？,LinkedList<String> list = new LinkedList<>();,LinkedList list = new LinkedList<String>();,LinkedList list = new LinkedList<>();,LinkedList<String> list = new LinkedList<String>();,1,3
+27,如何將陣列arr中的所有元素複製到新的ArrayList中？,ArrayList<Integer> list = new ArrayList<>(Arrays.asList(arr));,ArrayList<Integer> list = new ArrayList<>(arr);,ArrayList<Integer> list = arr.toList();,ArrayList<Integer> list = new ArrayList<>(arr.toArray());,1,3
+28,如何正確宣告一個無返回值的方法？,void methodName() {},int methodName() {},void methodName;,String methodName() {},1,4
+29,下列哪個關鍵字用於返回方法的結果？,return,break,continue,exit,1,4
+30,如何在方法內部使用傳入的參數？,方法內部直接使用參數名,使用this.訪問參數,參數需要先宣告為變數,參數無法在方法內部使用,1,4
+31,下列哪個方法可以計算兩個整數的和並返回結果？,"int sum(int a, int b) { return a + b; }","int sum(int a, int b) { System.out.println(a + b); }","void sum(int a, int b) { return a + b; }","String sum(int a, int b) { return a + b; }",1,4
+32,如何在Java中調用一個方法？,methodName();,call methodName();,run methodName();,invoke methodName();,1,4
+33,方法的重載（Overloading）是什麼？,使用相同名稱但不同參數的多個方法,使用相同名稱和相同參數的多個方法,在不同的類中定義相同的方法,在方法中調用自身,1,4
+34,如何將一個方法的返回值賦值給一個變數？,int result = methodName();,int result = methodName;,methodName() = result;,int result = methodName;,1,4
+35,在Java中，方法的參數傳遞是值傳遞還是引用傳遞？,值傳遞,引用傳遞,同時值傳遞和引用傳遞,取決於參數的類型,1,4
+36,如何定義一個有默認參數的方法？,Java中不支持有默認參數的方法,使用default關鍵字,在方法內部指定默認值,在方法外部指定默認值,1,4
+37,在Java中如何定義一個類？,class ClassName {},public ClassName {},Class ClassName {},new ClassName {},1,5
+38,如何在Java中創建一個物件？,ClassName obj = new ClassName();,ClassName obj = ClassName();,ClassName obj = new Object();,new obj = ClassName();,1,5
+39,下列哪個關鍵字用於繼承？,extends,implements,inherit,class,1,5
+40,下列哪個敘述關於this關鍵字是正確的？,this用於指向當前物件,this用於指向父類物件,this用於創建新物件,this用於刪除物件,1,5
+41,如何定義一個包含建構子的類？,class MyClass { MyClass() { } },class MyClass { MyClass(int x) { } },class MyClass { public MyClass() { } },class MyClass { void MyClass() { } },1,5
+42,下列哪個敘述關於多型是正確的？,多型允許相同的方法在不同的類中表現出不同的行為,多型是指在一個類中使用多個建構子,多型是指多個類可以共享相同的屬性,多型是指多個類可以共享相同的方法名稱,1,5
+43,如何定義一個抽象類別？,abstract class ClassName {},class abstract ClassName {},class ClassName abstract {},abstract ClassName class {},1,5
+44,如何讓一個類實現一個介面？,class MyClass implements InterfaceName {},class MyClass extends InterfaceName {},class MyClass inherit InterfaceName {},class MyClass implement InterfaceName {},1,5
+45,下列哪個敘述關於封裝是正確的？,封裝是指將資料和方法包裝在類中,封裝是指只允許類內部訪問資料,封裝是指將多個類包裝在一起,封裝是指只允許繼承的類訪問資料,1,5
