@@ -38,10 +38,15 @@ public class LoginActivity extends AppCompatActivity {
                 String username = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
 
-                if (validateLogin(username, password)) {
+                // 驗證登錄並獲取用戶 ID
+                long userid = validateLogin(username, password);
+
+                if (userid != -1) {
                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    intent.putExtra("_ID", userid);  // 傳遞用戶 ID
                     intent.putExtra("username", username);  // 傳遞用戶名
                     startActivity(intent);
+                    finish(); // 可選，防止用戶按返回鍵回到登錄頁面
                 } else {
                     Toast.makeText(LoginActivity.this, "登入失敗，請檢查您的用戶名和密碼", Toast.LENGTH_SHORT).show();
                 }
@@ -49,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private boolean validateLogin(String username, String password) {
+    private long validateLogin(String username, String password) {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         String[] columns = {UserDatabaseHelper.COLUMN_ID};
@@ -59,9 +64,13 @@ public class LoginActivity extends AppCompatActivity {
 
         Cursor cursor = db.query(UserDatabaseHelper.TABLE_USERS, columns, selection, selectionArgs, null, null, null);
 
-        boolean isValid = cursor.getCount() > 0;
+        long userid = -1; // 默認為 -1，表示用戶不存在
+        if (cursor.moveToFirst()) {
+            userid = cursor.getLong(cursor.getColumnIndex(UserDatabaseHelper.COLUMN_ID));
+        }
+
         cursor.close();
         db.close();
-        return isValid;
+        return userid;
     }
 }

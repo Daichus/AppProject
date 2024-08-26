@@ -25,6 +25,12 @@
             android:name=".MemberInfoActivity"
             android:exported="false" />
         <activity
+            android:name=".NewNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotesActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity

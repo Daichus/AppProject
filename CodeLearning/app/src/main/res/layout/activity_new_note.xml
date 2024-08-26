@@ -21,7 +21,7 @@
             android:id="@+id/TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="隨手筆記"
+            android:text="小筆記"
             android:textSize="34sp" />
 
 
