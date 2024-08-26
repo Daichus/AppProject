@@ -92,7 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:hint="休息 (例如：1、min)"
+                    android:hint="休息 (1min~60min)"
                     android:inputType="number" />
             </LinearLayout>
 

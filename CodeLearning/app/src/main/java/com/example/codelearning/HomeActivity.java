@@ -1,5 +1,6 @@
 package com.example.codelearning;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -59,7 +60,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         } else if (itemId == R.id.nav_checklist) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ChecklistFragment()).commit();
         } else if (itemId == R.id.nav_timer) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TimerFragment()).commit();
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TimerFragment()).commit();
+
+            Intent intent = new Intent(HomeActivity.this, TimerActivity.class);
+            startActivity(intent);
         } else if (itemId == R.id.nav_person) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PersonFragment()).commit();
         } else if (itemId == R.id.nav_note){
