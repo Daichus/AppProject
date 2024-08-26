@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
                 String password = passwordEditText.getText().toString();
 
                 if (validateLogin(username, password)) {
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                     intent.putExtra("username", username);  // 傳遞用戶名
                     startActivity(intent);
                 } else {
