@@ -1,7 +1,9 @@
 package com.example.codelearning;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -31,6 +33,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             return insets;
         });
 
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("username");
+        long userid = intent.getLongExtra("_ID",-1);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -59,11 +65,24 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         } else if (itemId == R.id.nav_checklist) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ChecklistFragment()).commit();
         } else if (itemId == R.id.nav_timer) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TimerFragment()).commit();
-        } else if (itemId == R.id.nav_person) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PersonFragment()).commit();
+            Intent intent = new Intent(HomeActivity.this, TimerActivity.class);
+            startActivity(intent);
         } else if (itemId == R.id.nav_note){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NoteFragment()).commit();
+            Intent intentFromLogin_ID = getIntent();
+            long userid = intentFromLogin_ID.getLongExtra("_ID", -1);
+
+            Intent intent = new Intent(HomeActivity.this, NewNoteActivity.class);
+            intent.putExtra("_ID", userid);
+            startActivity(intent);
+        } else if (itemId == R.id.nav_person) {
+        // 接收從 LoginActivity 傳遞過來的 username
+        Intent intentFromLogin_name = getIntent();
+        String username = intentFromLogin_name.getStringExtra("username");
+
+        // 傳遞 username 到 MemberInfoActivity
+        Intent intent = new Intent(HomeActivity.this, MemberInfoActivity.class);
+        intent.putExtra("username", username);
+        startActivity(intent);
         } else if (itemId == R.id.nav_logout) {
             Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
         }

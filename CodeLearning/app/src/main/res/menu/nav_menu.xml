@@ -31,7 +31,7 @@
             android:id="@+id/nav_note"
             android:icon="@drawable/nav_note"
             android:title="小筆記"/>
-
+      
         <item
             android:id="@+id/nav_person"
             android:icon="@drawable/nav_person"
