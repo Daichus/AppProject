@@ -20,14 +20,43 @@
         android:foregroundGravity="top|center"
         android:src="@drawable/logo" />
 
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="92dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="每日任務"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="完成一個章節"
+            android:textSize="20sp" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="291dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="277dp"
         android:gravity="center|fill_horizontal"
         android:text="To Do List"
         android:textSize="34sp" />
@@ -48,5 +77,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="65dp"
-        android:layout_marginBottom="109dp" />
+        android:layout_marginBottom="109dp"
+        android:entries="@array/list" />
+
 </RelativeLayout>
