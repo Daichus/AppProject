@@ -67,5 +67,10 @@ public class PracticeActivity extends AppCompatActivity {
         setResult(Activity.RESULT_OK, intent);
         finish();
     }
+    public void toPieChart(View view) {
+        Intent intent = new Intent(this,PieChartActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
 }

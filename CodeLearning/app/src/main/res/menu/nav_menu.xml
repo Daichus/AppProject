@@ -44,8 +44,8 @@
         <menu>
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/nav_logout"
-                android:title="Logout"/>
+                android:icon="@drawable/nav_game"
+                android:title="排行榜"/>
         </menu>
     </item>
 

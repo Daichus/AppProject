@@ -61,7 +61,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (itemId == R.id.nav_home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
         } else if (itemId == R.id.nav_document) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DocumentFragment()).commit();
+            Intent intent = new Intent(HomeActivity.this, SelectQuestionActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "選擇測驗章節", Toast.LENGTH_SHORT).show();
         } else if (itemId == R.id.nav_checklist) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ChecklistFragment()).commit();
         } else if (itemId == R.id.nav_timer) {
@@ -84,7 +86,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         intent.putExtra("username", username);
         startActivity(intent);
         } else if (itemId == R.id.nav_logout) {
-            Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "查看排名", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, RankingResult.class);
+            startActivity(intent);
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

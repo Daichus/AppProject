@@ -193,4 +193,7 @@ public class SelectQuestionActivity extends AppCompatActivity implements Adapter
         intent.putExtras(bundle);
         practiceActivityLauncher.launch(intent);
     }
+    public void returnHomePage (View view) {
+        finish();
+    }
 }
