@@ -7,9 +7,4 @@
     <string name="name"></string>
 
     <string name="app_todo">Todo_List</string>
-    <string-array name="list">
-        <item>目標1.完成第一章</item>
-        <item>目標2.20分鐘內完成題目</item>
-        <item>目標3.</item>
-    </string-array>
 </resources>
