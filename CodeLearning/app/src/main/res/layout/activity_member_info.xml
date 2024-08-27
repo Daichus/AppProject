@@ -17,6 +17,12 @@
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="20dp">
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            app:srcCompat="@drawable/login" />
+
         <TextView
             android:id="@+id/id"
             android:layout_width="wrap_content"

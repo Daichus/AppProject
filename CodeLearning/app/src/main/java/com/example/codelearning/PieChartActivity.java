@@ -1,5 +1,4 @@
 package com.example.codelearning;
-
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -14,8 +13,8 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.components.Description; // 確認這行引用的是 MPAndroidChart 的 Description 類別
 
-import java.sql.Array;
 import java.util.ArrayList;
 
 public class PieChartActivity extends AppCompatActivity {
@@ -45,7 +44,14 @@ public class PieChartActivity extends AppCompatActivity {
 
         PieData pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
-        pieChart.getDescription().setEnabled(false);
+
+        // 創建並設置描述
+        Description description = new Description(); // 正確的建構方式
+        description.setText("答對：8 題  答錯：2 題  你的排名：第十名  "); // 設置描述文字
+        description.setTextSize(20f);    // 設置描述文字的字型大小
+        description.setTextColor(Color.BLACK); // 設置描述文字的顏色
+        pieChart.setDescription(description);  // 將描述文字設定給 PieChart
+
         pieChart.animateY(1000);
         pieChart.invalidate();
     }
