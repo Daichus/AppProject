@@ -28,14 +28,15 @@
             android:title="計時器"/>
 
         <item
+            android:id="@+id/nav_note"
+            android:icon="@drawable/nav_note"
+            android:title="小筆記"/>
+
+        <item
             android:id="@+id/nav_person"
             android:icon="@drawable/nav_person"
             android:title="會員資料"/>
 
-        <item
-            android:id="@+id/nav_note"
-            android:icon="@drawable/nav_note"
-            android:title="小筆記"/>
     </group>
 
     <item
